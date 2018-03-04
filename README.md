@@ -56,6 +56,7 @@ After that unpack files. E.g:
 cd /home/pi/RetroPie/roms/amiga-data/Games_WHDLoad_AGA
 7z x "*.lha"
 ```
+It's better and safer to unpack files in Raspberry Pi, because some games includes files with characters, which are illegal in Windows.
 
 ## Prepare whdload and kickstarts
 Unpack `WHDLoad_Booter.zip` to `/home/pi/RetroPie/roms/amiga-data/` from http://www.ultimateamiga.co.uk/HostedProjects/RetroPieAmiga/downloads/WHDLoad_Booter.zip
