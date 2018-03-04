@@ -14,7 +14,7 @@ https://retropie.org.uk/download/
 - At first boot teach only keyboard, do not teach gamepad/joystick at this point
 - If you use wireless network, set Wifi-settings
 - Use raspi-config for timezone, keyboard-layout and enable ssh
-- Use RetroPie settings to install Amiberry from binary (27.2.2018: Amiberry v2.14)
+- Use RetroPie setup (Manage packages -> Manage optional packages -> Amiberry -> Install from binary) to install Amiberry (27.2.2018: Amiberry v2.14)
 - If you prefer "sony" style for gamepad (bottom X is basic fire/select and O is second fire/back in Playstation controller), use RetroPie settings to swap A and B in Emulation station. If you don't, then "nintendo"-style is used where A is right side (Sony controller O is A) and B left side (Sony Controller X is B).
 - Teach gamepad/joystick (if you prefer "sony" style button order, teach A and B (and X and Y) backwards)
 
