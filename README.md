@@ -1,17 +1,20 @@
 # Raspberry-Amiga-Emulation
 Emulating Amiga with Raspberry Pi
 
-Prepare RetroPie
-Wifi
-raspi-config:
-Timezone
-Keyboard
-SSH (pi:raspberry)
-Install Amiberry from binary (27.2.2018: v2.14)
+## Get RetroPie
+Download RetroPie image and write it SD-card (if you use Windows, Rufus is easy. with Linux all you need is dd-command)
 
-- Opeta näppis normaalisti
+https://retropie.org.uk/download/
+
+## Prepare RetroPie
+- In first boot teach only keyboard, do not teach gamepad/joystick at this point
+- If you use wireless network, set Wifi-settings
+- Use raspi-config for timezone, keyboard-layout and enable ssh
+- Use RetroPie settings to install Amiberry from binary
+- If you prefer "sony" style for gamepad (bottom X is basic fire/select and O is second fire/back in Playstation controller), use RetroPie settings to swap A and B in Emulation station. If you don't, then "nintendo"-style is used where A is right side (Sony controller O is A) and B left side (Sony Controller X is B).
+- Teach gamepad/joystick (if you prefer "sony" style button order, teach A and B (and X and Y) backwards)
+
 - sed -i 's/es_swap_a_b = "0"/es_swap_a_b = "1"/g' /opt/retropie/configs/all/autoconf.cfg
-- opeta ohjain siten että pistät A/B ja X/Y väärinpäin.
 
 /boot/config.txt:
 https://www.raspberrypi.org/documentation/configuration/config-txt/video.md
@@ -63,3 +66,4 @@ python3 uae_config_maker.py --no-update --create-autostartup --force-config-over
 - Amiberry https://blitterstudio.com/amiberry/
 - Raspberry Pi video output options https://www.raspberrypi.org/documentation/configuration/config-txt/video.md
 - Guide http://www.ultimateamiga.co.uk/HostedProjects/RetroPieAmiga/
+- Rufus https://rufus.akeo.ie/
