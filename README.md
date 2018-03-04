@@ -18,8 +18,6 @@ https://retropie.org.uk/download/
 - If you prefer "sony" style for gamepad (bottom X is basic fire/select and O is second fire/back in Playstation controller), use RetroPie settings to swap A and B in Emulation station. If you don't, then "nintendo"-style is used where A is right side (Sony controller O is A) and B left side (Sony Controller X is B).
 - Teach gamepad/joystick (if you prefer "sony" style button order, teach A and B (and X and Y) backwards)
 
-- sed -i 's/es_swap_a_b = "0"/es_swap_a_b = "1"/g' /opt/retropie/configs/all/autoconf.cfg
-
 ## Video output settings
 Raspberry Pi default output is most of time 60Hz. It detects it from television/monitor automatically. It is important to get 50Hz output. Other thing is that some televisions do overscan for so called CEA-modes. I have LG UJ750V and it overscans way too much, so I have to use DMT-modes. I use 1440x1050@50Hz DMT-mode.
 
