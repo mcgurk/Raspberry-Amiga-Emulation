@@ -87,7 +87,7 @@ git clone https://github.com/HoraceAndTheSpider/UAEConfigMaker.git
 mv UAEConfigMaker .uaeconfigmaker
 cd /home/pi/.uaeconfigmaker
 ```
-Then we do some tweaks. We change default 640x240 image area to 704x270 so games/demos are not chopped. `gfx_linemode=none` makes image little bit smoother. If you want fully sharp pixels, you can leave that out (default is gfx_linemode=double).
+Then we do some tweaks. We change default 640x240 image area to 704x270 so games/demos are not chopped. `gfx_linemode=none` makes image little bit smoother. If you want fully sharp pixels, you can leave that out (default is `gfx_linemode=double`).
 ```
 sed -i '0,/screen_height = 240/s//screen_height = 270/' /home/pi/.uaeconfigmaker/uae_config_maker.py
 sed -i '0,/screen_width = 640/s//screen_width = 704/' /home/pi/.uaeconfigmaker/uae_config_maker.py
