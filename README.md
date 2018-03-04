@@ -11,7 +11,7 @@ Download RetroPie image and write it SD-card (If you use Windows, Rufus is easy.
 https://retropie.org.uk/download/
 
 ## Prepare RetroPie
-- In first boot teach only keyboard, do not teach gamepad/joystick at this point
+- At first boot teach only keyboard, do not teach gamepad/joystick at this point
 - If you use wireless network, set Wifi-settings
 - Use raspi-config for timezone, keyboard-layout and enable ssh
 - Use RetroPie settings to install Amiberry from binary
