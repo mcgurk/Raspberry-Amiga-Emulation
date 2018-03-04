@@ -20,8 +20,8 @@ Use dedicated SD-card for Amiga-RetroPie-installation. Other RetroPie-emulators 
 - Optional: If you prefer "sony" style for gamepad (bottom X is basic fire/select and O is second fire/back in Playstation controller), use RetroPie setup (Configuration/tools -> emulationstation -> Swap A/B Buttons in ES) to swap A and B in Emulation station. If you don't, then "nintendo"-style is used where A is right side (Sony controller O is A) and B left side (Sony Controller X is B).
 - Teach gamepad/joystick (optional: if you prefer "sony" style button order, teach A and B (and X and Y) backwards)
 
-### Important!
-Some reason RetroPie-controller configuration is not default in Amiberry. Lets change Amiberry to use RetroPie-controller configs:
+#### Important!
+Some reason RetroPie-controller configuration is not default in Amiberry. Change path from Amiberry menu under Paths -> Controller files to `/opt/retropie/configs/all/retroarch/autoconfig/`. You can also change this setting from command line:
 ```
 sed -i 's/\/opt\/retropie\/emulators\/amiberry\/controllers\//\/opt\/retropie\/configs\/all\/retroarch\/autoconfig\//g' /opt/retropie/emulators/amiberry/conf/adfdir.conf
 ```
