@@ -4,7 +4,7 @@ Emulating Amiga with Raspberry Pi
 PAL machine with 50Hz output.
 
 ## Get RetroPie
-Download RetroPie image and write it SD-card (if you use Windows, Rufus is easy. with Linux all you need is dd-command)
+Download RetroPie image and write it SD-card (If you use Windows, Rufus is easy. With Linux all you need is dd-command)
 
 https://retropie.org.uk/download/
 
