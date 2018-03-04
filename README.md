@@ -111,7 +111,7 @@ python3 uae_config_maker.py --no-update --create-autostartup --force-config-over
 - Amibian https://gunkrist79.wixsite.com/amibian
 - Amiberry https://blitterstudio.com/amiberry/
 - Raspberry Pi video output options https://www.raspberrypi.org/documentation/configuration/config-txt/video.md
-- Guide http://www.ultimateamiga.co.uk/HostedProjects/RetroPieAmiga/
+- WHDLoad_Booter.zip and Guide http://www.ultimateamiga.co.uk/HostedProjects/RetroPieAmiga/
 - Rufus https://rufus.akeo.ie/
 - UAEConfigMaker https://github.com/HoraceAndTheSpider/UAEConfigMaker
 
