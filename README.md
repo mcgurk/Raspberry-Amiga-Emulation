@@ -20,6 +20,13 @@ Use dedicated SD-card for Amiga-RetroPie-installation. Other RetroPie-emulators 
 - Optional: If you prefer "sony" style for gamepad (bottom X is basic fire/select and O is second fire/back in Playstation controller), use RetroPie setup (Configuration/tools -> emulationstation -> Swap A/B Buttons in ES) to swap A and B in Emulation station. If you don't, then "nintendo"-style is used where A is right side (Sony controller O is A) and B left side (Sony Controller X is B).
 - Teach gamepad/joystick (optional: if you prefer "sony" style button order, teach A and B (and X and Y) backwards)
 
+### Important!
+Some reason RetroPie-controller configuration is not default in Amiberry. Lets change Amiberry to use RetroPie-controller configs:
+```
+sed -i 's/\/opt\/retropie\/emulators\/amiberry\/controllers\//\/opt\/retropie\/configs\/all\/retroarch\/autoconfig\//g' /opt/retropie/emulators/amiberry/conf/adfdir.conf
+```
+Without this controller button mappings can be anything.
+
 ## Video output settings
 Raspberry Pi default output is most of time 60Hz. It detects it from television/monitor automatically. It is important to get 50Hz output. Other thing is that some televisions do overscan for so called CEA-modes. I have LG UJ750V and it overscans way too much, so I have to use DMT-modes. I use 1440x1050@50Hz DMT-mode.
 
