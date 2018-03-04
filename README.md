@@ -38,7 +38,7 @@ hdmi_mode=31
 ## Preparing games
 Copy packed files to these locations. My files are .lha -files. Whole list of supported paths are in https://github.com/HoraceAndTheSpider/UAEConfigMaker/blob/master/settings/UAEConfigMaker_ScanPaths.txt
 
-Copying is easiest through network. RetroPie should show as `\\retropie` network share (SMB). If \\retropie doesn't work, use IP-address instead of retropie
+Copying is easiest through network. RetroPie should show as `\\retropie` network share (SMB). If `\\retropie` doesn't work, use IP-address instead of retropie
 ```
 /home/pi/RetroPie/roms/amiga-data/Games_WHDLoad
 /home/pi/RetroPie/roms/amiga-data/Games_WHDLoad_AGA
