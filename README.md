@@ -35,6 +35,8 @@ hdmi_group=1
 hdmi_mode=31
 ```
 
+Videomodes and videosettings are listed here https://www.raspberrypi.org/documentation/configuration/config-txt/video.md.
+
 ## Preparing games
 Copy packed files to these locations. My files are .lha -files. Whole list of supported paths are in https://github.com/HoraceAndTheSpider/UAEConfigMaker/blob/master/settings/UAEConfigMaker_ScanPaths.txt
 ```
