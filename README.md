@@ -29,7 +29,7 @@ hdmi_group=2
 hdmi_mode=87
 hdmi_cvt=1440 1050 50 1 0 0 1
 ```
-1920x1080@50Hz (CEA):
+If you prefer normal television mode and it works without overscan in your television, use 1920x1080@50Hz (CEA):
 ```
 hdmi_group=1
 hdmi_mode=31
