@@ -1,7 +1,9 @@
 # Raspberry-Amiga-Emulation
 Emulating Amiga with Raspberry Pi
 
-PAL machine with 50Hz output.
+PAL machine with 50Hz output using RetroPie and Amiberry.
+
+(If you want standalone Amiga without RetroPie-menus, use Amibian.)
 
 ## Get RetroPie
 Download RetroPie image and write it SD-card (If you use Windows, Rufus is easy. With Linux all you need is dd-command)
