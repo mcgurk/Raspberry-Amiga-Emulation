@@ -25,7 +25,7 @@ Some reason RetroPie-controller configuration is not default in Amiberry. Change
 ```
 sed -i 's/\/opt\/retropie\/emulators\/amiberry\/controllers\//\/opt\/retropie\/configs\/all\/retroarch\/autoconfig\//g' /opt/retropie/emulators/amiberry/conf/adfdir.conf
 ```
-Without this controller button mappings can be anything. You can check that setting is working by going Amiberry Custom controls -menu. Right side of Input device there is \[R\] if setting is working. If it is not workin, there is \[N\].
+Without this controller button mappings can be anything. You can check that setting is working by going Amiberry Custom controls -menu. Right side of Input device there is \[R\] if setting is working. If it is not working, there is \[N\].
 
 ## Video output settings
 Raspberry Pi default output is most of time 60Hz. It detects it from television/monitor automatically. It is important to get 50Hz output. Other thing is that some televisions do overscan for so called CEA-modes. I have LG UJ750V and it overscans way too much, so I have to use DMT-modes. I use 1440x1050@50Hz DMT-mode.
@@ -119,6 +119,7 @@ python3 uae_config_maker.py --no-update --create-autostartup --force-config-over
 - RetroPie https://retropie.org.uk/
 - Amibian https://gunkrist79.wixsite.com/amibian
 - Amiberry https://blitterstudio.com/amiberry/
+- Amiberry, controllers https://github.com/midwan/amiberry/wiki/Setting-up-Input-Controllers
 - Raspberry Pi video output options https://www.raspberrypi.org/documentation/configuration/config-txt/video.md
 - WHDLoad_Booter.zip and Guide http://www.ultimateamiga.co.uk/HostedProjects/RetroPieAmiga/
 - Rufus https://rufus.akeo.ie/
