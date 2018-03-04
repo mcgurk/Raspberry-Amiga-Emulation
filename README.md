@@ -103,7 +103,6 @@ If you need use uae_config_maker many times, add --no-update -parameter to it so
 python3 uae_config_maker.py --no-update --create-autostartup --force-config-overwrite
 ```
 
-
 ## Links
 - RetroPie https://retropie.org.uk/
 - Amibian https://gunkrist79.wixsite.com/amibian
@@ -112,3 +111,7 @@ python3 uae_config_maker.py --no-update --create-autostartup --force-config-over
 - Guide http://www.ultimateamiga.co.uk/HostedProjects/RetroPieAmiga/
 - Rufus https://rufus.akeo.ie/
 - UAEConfigMaker https://github.com/HoraceAndTheSpider/UAEConfigMaker
+
+## Todo
+- 288p output
+- Own menu for CD32 and AGA games and demos
