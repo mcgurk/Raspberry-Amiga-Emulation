@@ -10,6 +10,8 @@ Download RetroPie image and write it SD-card (If you use Windows, Rufus is easy.
 
 https://retropie.org.uk/download/
 
+Use dedicated SD-card for Amiga-RetroPie-installation. Other RetroPie-emulators not necessarily work fine with 50Hz output.
+
 ## Prepare RetroPie
 - At first boot teach only keyboard, do not teach gamepad/joystick at this point
 - If you use wireless network, set Wifi-settings
