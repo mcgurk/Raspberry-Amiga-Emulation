@@ -1,6 +1,8 @@
 # Raspberry-Amiga-Emulation
 Emulating Amiga with Raspberry Pi
 
+PAL machine with 50Hz output.
+
 ## Get RetroPie
 Download RetroPie image and write it SD-card (if you use Windows, Rufus is easy. with Linux all you need is dd-command)
 
@@ -16,17 +18,25 @@ https://retropie.org.uk/download/
 
 - sed -i 's/es_swap_a_b = "0"/es_swap_a_b = "1"/g' /opt/retropie/configs/all/autoconf.cfg
 
-/boot/config.txt:
-https://www.raspberrypi.org/documentation/configuration/config-txt/video.md
-1440x1050, DMT (kirkkaat värit ja vähemmän säätöjä kuin CEA:ssa. Ei overscannia!):
+## Video output settings
+Raspberry Pi default output is most of time 60Hz. It detects it from television/monitor automatically. It is important to get 50Hz output. Other thing is that some televisions do overscan for so called CEA-modes. I have LG UJ750V and it overscans way too much, so I have to use DMT-modes. I use 1440x1050@50Hz DMT-mode.
+
+Edit /boot/config.txt (ssh to RetroPie (pi:raspberry) and give command sudo `nano /boot/config.txt`.
+
+1440x1050@50Hz (DMT):
+```
 hdmi_group=2
 hdmi_mode=87
 hdmi_cvt=1440 1050 50 1 0 0 1
-(CEA 1920x1080 50Hz:)
-(hdmi_group=1)
-(hdmi_mode=31)
+```
+1920x1080@50Hz (CEA):
+```
+hdmi_group=1
+hdmi_mode=31
+```
 
-Pelitiedostot (kopsaa lha:t näihin):
+## Preparing games
+Copy packed files to these locations.
 /home/pi/RetroPie/roms/amiga-data/Games_WHDLoad
 /home/pi/RetroPie/roms/amiga-data/Games_WHDLoad_AGA
 /home/pi/RetroPie/roms/amiga-data/Games_WHDLoad_CD32
@@ -67,3 +77,4 @@ python3 uae_config_maker.py --no-update --create-autostartup --force-config-over
 - Raspberry Pi video output options https://www.raspberrypi.org/documentation/configuration/config-txt/video.md
 - Guide http://www.ultimateamiga.co.uk/HostedProjects/RetroPieAmiga/
 - Rufus https://rufus.akeo.ie/
+- UAEConfigMaker https://github.com/HoraceAndTheSpider/UAEConfigMaker
