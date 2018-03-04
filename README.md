@@ -36,16 +36,27 @@ hdmi_mode=31
 ```
 
 ## Preparing games
-Copy packed files to these locations.
+Copy packed files to these locations. My files are .lha -files. Whole list of supported paths are in https://github.com/HoraceAndTheSpider/UAEConfigMaker/blob/master/settings/UAEConfigMaker_ScanPaths.txt
+
+Copying is easiest through network. RetroPie should show as `\\retropie` network share (SMB). If \\retropie doesn't work, use IP-address instead of retropie
+```
 /home/pi/RetroPie/roms/amiga-data/Games_WHDLoad
 /home/pi/RetroPie/roms/amiga-data/Games_WHDLoad_AGA
 /home/pi/RetroPie/roms/amiga-data/Games_WHDLoad_CD32
 /home/pi/RetroPie/roms/amiga-data/Demos_WHDLoad
+```
+To unpack lha-files with Raspbian, you have to install p7zip-full:
+```
 sudo apt install p7zip-full
+```
+After that unpack files. E.g:
+```
+cd /home/pi/RetroPie/roms/amiga-data/Games_WHDLoad_AGA
 7z x "*.lha"
+```
 
-/home/pi/RetroPie/roms/amiga-data/:
-http://www.ultimateamiga.co.uk/HostedProjects/RetroPieAmiga/downloads/WHDLoad_Booter.zip
+## Prepare whdload and kickstarts
+Unpack `WHDLoad_Booter.zip` to `/home/pi/RetroPie/roms/amiga-data/` from http://www.ultimateamiga.co.uk/HostedProjects/RetroPieAmiga/downloads/WHDLoad_Booter.zip
 
 /home/pi/RetroPie/bios/Amiga/:
 kick31.rom	Kickstart v3.1 rev 40.68 (1993)(Commodore)(A1200).rom	1483a091 / 1d9aa278
