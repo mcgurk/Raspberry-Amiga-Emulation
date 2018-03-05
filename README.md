@@ -125,6 +125,33 @@ python3 uae_config_maker.py --no-update --create-autostartup --force-config-over
 - Rufus https://rufus.akeo.ie/
 - UAEConfigMaker https://github.com/HoraceAndTheSpider/UAEConfigMaker
 
+## Optional: 288p composite output
+Raspberry Pi av-output is 3.5mm TRRS-plug. Sleeve is video, ring next to sleeve is GND. Tip is left audio and ring next to tip is right audio. Many cables have GND in sleeve: e.g. Nokia or Orange Pi cables doesn't work.
+
+Activating 288p output from /boot/config.txt:
+```
+sdtv_mode=18
+sdtv_aspect=1
+framebuffer_width=768
+framebuffer_height=576
+```
+Check that hdmi_force_hotplug=1 is not activated. with force_hotplug=1 composite output doesn't work.
+Without framebuffer-lines `gfx_linemode=double` doesn't work. We need double scanlines so filtering are not messing with our image. Without double scanlines it can be that only bilinear filttered scanlines show up and image is not sharp.
+
+Important settings in .uae files:
+```
+gfx_linemode=double
+gfx_width=768
+gfx_height=288
+gfx_width_windowed=768
+gfx_height_windowed=288
+gfx_width_fullscreen=768
+gfx_height_fullscreen=288
+amiberry.vertical_offset=-16
+```
+You may want to change vertical offset. It depends from television.
+Amiberry settings-windows doesn't support over 270 vertical resolutions. That's why we have to get 288 straight to .uae-files.
+
 ## Todo
-- 288p output
+- check that audio works in 288p mode
 - Own menu for CD32 and AGA games and demos
