@@ -155,5 +155,4 @@ You may want to change vertical offset. It depends from television.
 Amiberry settings-windows doesn't support over 270 vertical resolutions. That's why we have to get 288 straight to .uae-files.
 
 ## Todo
-- check that audio works in 288p mode
 - Own menu for CD32 and AGA games and demos
