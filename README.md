@@ -146,6 +146,7 @@ cp /home/pi/.uaeconfigmaker/templates/amiberry.uaetemp /home/pi/.uaeconfigmaker/
 Edit it with `nano /home/pi/.uaeconfigmaker/templates/288p.uaetemp`:
 ```
 amiberry.gfx_correct_aspect=false
+amiberry.horizontal_offset=0
 amiberry.vertical_offset=-16
 
 gfx_framerate=0
@@ -158,26 +159,15 @@ gfx_width_fullscreen=720
 gfx_height_fullscreen=288
 gfx_correct_aspect=false
 ```
+You may want to change vertical offset. It depends from television.
+
+Horizontal offset doesn't seem to work.
+
 Generate .uae-files:
 ```
 cd /home/pi/.uaeconfigmaker
 python3 uae_config_maker.py --no-update --create-autostartup --force-config-overwrite --config-template 288p
 ```
-
-Important settings in .uae files:
-```
-gfx_linemode=double
-gfx_width=768
-gfx_height=288
-gfx_width_windowed=768
-gfx_height_windowed=288
-gfx_width_fullscreen=768
-gfx_height_fullscreen=288
-amiberry.vertical_offset=-16
-```
-You may want to change vertical offset. It depends from television.
-
-Amiberry settings-windows doesn't support over 270 vertical resolutions. That's why we have to get 288 straight to .uae-files.
 
 ## Misc stuff
 ### disable dynamic CPU frequency scaling
