@@ -163,6 +163,8 @@ You may want to change vertical offset. It depends from television.
 
 Horizontal offset doesn't seem to work.
 
+If your television overscans a lot, use 768 instead of 720 (in config.txt and 288p.uaetemp).
+
 Generate .uae-files:
 ```
 cd /home/pi/.uaeconfigmaker
