@@ -132,12 +132,37 @@ Activating 288p output from /boot/config.txt:
 ```
 sdtv_mode=18
 sdtv_aspect=1
-framebuffer_width=768
+framebuffer_width=720
 framebuffer_height=576
 ```
 Check that hdmi_force_hotplug=1 is not activated. with force_hotplug=1 composite output doesn't work.
 
 Without framebuffer-lines `gfx_linemode=double` doesn't work. We need double scanlines so filtering are not messing with our image. Without double scanlines it can be that only bilinear filttered scanlines show up and image is not sharp.
+
+Make copy of default template:
+```
+cp /home/pi/.uaeconfigmaker/templates/amiberry.uaetemp /home/pi/.uaeconfigmaker/templates/288p.uaetemp
+```
+Edit it with `nano /home/pi/.uaeconfigmaker/templates/288p.uaetemp`:
+```
+amiberry.gfx_correct_aspect=false
+amiberry.vertical_offset=-16
+
+gfx_framerate=0
+gfx_linemode=double
+gfx_width=720
+gfx_height=288
+gfx_width_windowed=720
+gfx_height_windowed=288
+gfx_width_fullscreen=720
+gfx_height_fullscreen=288
+gfx_correct_aspect=false
+```
+Generate .uae-files:
+```
+cd /home/pi/.uaeconfigmaker
+python3 uae_config_maker.py --no-update --create-autostartup --force-config-overwrite --config-template 288p
+```
 
 Important settings in .uae files:
 ```
