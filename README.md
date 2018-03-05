@@ -154,11 +154,23 @@ You may want to change vertical offset. It depends from television.
 
 Amiberry settings-windows doesn't support over 270 vertical resolutions. That's why we have to get 288 straight to .uae-files.
 
-## Optional: disable dynamic CPU frequency scaling
+## Misc stuff
+### disable dynamic CPU frequency scaling
 Maximum frequency all the time:
 ```
 sudo sed -i 's/ondemand/performance/g' /etc/init.d/raspi-config
 ```
+### Monitoring temperature and frequency
+```
+watch -n 0.5 "vcgencmd measure_temp; cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq"
+```
+### Monitoring CPU usage
+```
+sudo apt install htop
+htop
+```
+
+
 
 ## Todo
 - Own menu for CD32 and AGA games and demos
