@@ -136,6 +136,7 @@ framebuffer_width=768
 framebuffer_height=576
 ```
 Check that hdmi_force_hotplug=1 is not activated. with force_hotplug=1 composite output doesn't work.
+
 Without framebuffer-lines `gfx_linemode=double` doesn't work. We need double scanlines so filtering are not messing with our image. Without double scanlines it can be that only bilinear filttered scanlines show up and image is not sharp.
 
 Important settings in .uae files:
@@ -150,6 +151,7 @@ gfx_height_fullscreen=288
 amiberry.vertical_offset=-16
 ```
 You may want to change vertical offset. It depends from television.
+
 Amiberry settings-windows doesn't support over 270 vertical resolutions. That's why we have to get 288 straight to .uae-files.
 
 ## Todo
