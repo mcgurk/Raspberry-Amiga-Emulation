@@ -30,7 +30,7 @@ Without this controller button mappings can be anything. You can check that sett
 ## Video output settings
 Raspberry Pi default output is most of time 60Hz. It detects it from television/monitor automatically. It is important to get 50Hz output. Other thing is that some televisions do overscan for so called CEA-modes. I have LG UJ750V and it overscans way too much, so I have to use DMT-modes. I use 1440x1050@50Hz DMT-mode. Mode affects also to black and white levels: RGB limited (16-235) for CEA, RGB full (0-255) for DMT.
 
-Edit /boot/config.txt (ssh to RetroPie (pi:raspberry) and give command sudo `nano /boot/config.txt`.
+Edit /boot/config.txt by ssh:ing to RetroPie (pi:raspberry) and give command sudo `nano /boot/config.txt`.
 
 1440x1050@50Hz (DMT):
 ```
