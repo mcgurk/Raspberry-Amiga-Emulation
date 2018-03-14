@@ -264,7 +264,7 @@ mkdir -p /home/pi/RetroPie/roms/cd32/Games_WHDLoad_CD32
 ln -s /home/pi/RetroPie/roms/amiga-data/_BootWHD /home/pi/RetroPie/roms/cd32/.
 ```
 
-Copy CD32-games to `\\retropie\roms\cd32\Demos_WHDLoad` or `/home/pi/RetroPie/roms/cd32/Games_WHDLoad_CD32`.
+Copy CD32-games to `\\retropie\roms\cd32\Games_WHDLoad_CD32` or `/home/pi/RetroPie/roms/cd32/Games_WHDLoad_CD32`.
 Unpack archives:
 ```
 cd /home/pi/RetroPie/roms/demos/Games_WHDLoad_CD32
