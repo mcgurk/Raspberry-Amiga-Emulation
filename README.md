@@ -196,7 +196,7 @@ python3 uae_config_maker.py --no-update --create-autostartup --force-config-over
 ```
 
 #### Add "E"-menu to amulations station
-Make copy of `es_systems.cfg` and edit copy:
+Make copy of `es_systems.cfg` (only first time) and edit copy:
 ```
 sudo cp /etc/emulationstation/es_systems.cfg /opt/retropie/configs/all/emulationstation/es_systems.cfg
 sudo nano /opt/retropie/configs/all/emulationstation/es_systems.cfg
@@ -215,6 +215,87 @@ Add lines:
 ```
 Restart Emulation station
 
+### Own menu for demos
+
+Make folder for demos and make symbolic link for `_BootWHD`:
+```
+mkdir -p /home/pi/RetroPie/roms/demos/Demos_WHDLoad
+ln -s /home/pi/RetroPie/roms/amiga-data/_BootWHD /home/pi/RetroPie/roms/demos/.
+```
+
+Copy demos to `\\retropie\roms\demos\Demos_WHDLoad` or `/home/pi/RetroPie/roms/demos/Demos_WHDLoad`.
+Unpack archives:
+```
+cd /home/pi/RetroPie/roms/demos/Demos_WHDLoad
+7z x "*.lha"
+```
+
+Generate .uae-files:
+```
+cd /home/pi/.uaeconfigmaker
+python3 uae_config_maker.py --no-update --create-autostartup --force-config-overwrite --scandirs /home/pi/RetroPie/roms/demos/ --outputdir /home/pi/RetroPie/roms/demos/
+```
+
+#### Add "DEMOS"-menu to amulations station
+Make copy of `es_systems.cfg` (only first time) and edit copy:
+```
+sudo cp /etc/emulationstation/es_systems.cfg /opt/retropie/configs/all/emulationstation/es_systems.cfg
+sudo nano /opt/retropie/configs/all/emulationstation/es_systems.cfg
+```
+Add lines:
+```
+  <system>
+    <name>demos</name>
+    <fullname>Commodore Amiga Demos</fullname>
+    <path>/home/pi/RetroPie/roms/demos</path>
+    <extension>.uae</extension>
+    <command>/opt/retropie/supplementary/runcommand/runcommand.sh 0 _SYS_ amiga %ROM%</command>
+    <platform>amiga</platform>
+    <theme>demos</theme>
+  </system>
+```
+Restart Emulation station
+
+### Own menu for CD32
+
+Make folder for demos and make symbolic link for `_BootWHD`:
+```
+mkdir -p /home/pi/RetroPie/roms/cd32/Games_WHDLoad_CD32
+ln -s /home/pi/RetroPie/roms/amiga-data/_BootWHD /home/pi/RetroPie/roms/cd32/.
+```
+
+Copy CD32-games to `\\retropie\roms\cd32\Demos_WHDLoad` or `/home/pi/RetroPie/roms/cd32/Games_WHDLoad_CD32`.
+Unpack archives:
+```
+cd /home/pi/RetroPie/roms/demos/Games_WHDLoad_CD32
+7z x "*.lha"
+```
+
+Generate .uae-files:
+```
+cd /home/pi/.uaeconfigmaker
+python3 uae_config_maker.py --no-update --create-autostartup --force-config-overwrite --scandirs /home/pi/RetroPie/roms/cd32/ --outputdir /home/pi/RetroPie/roms/cd32/
+```
+
+#### Add "DEMOS"-menu to amulations station
+Make copy of `es_systems.cfg` (only first time) and edit copy:
+```
+sudo cp /etc/emulationstation/es_systems.cfg /opt/retropie/configs/all/emulationstation/es_systems.cfg
+sudo nano /opt/retropie/configs/all/emulationstation/es_systems.cfg
+```
+Add lines:
+```
+  <system>
+    <name>cd32</name>
+    <fullname>Commodore Amiga CD32</fullname>
+    <path>/home/pi/RetroPie/roms/cd32</path>
+    <extension>.uae</extension>
+    <command>/opt/retropie/supplementary/runcommand/runcommand.sh 0 _SYS_ amiga %ROM%</command>
+    <platform>amiga</platform>
+    <theme>cd32</theme>
+  </system>
+```
+Restart Emulation station
 
 ## Misc stuff
 ### disable dynamic CPU frequency scaling
