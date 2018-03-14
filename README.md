@@ -171,6 +171,51 @@ cd /home/pi/.uaeconfigmaker
 python3 uae_config_maker.py --no-update --create-autostartup --force-config-overwrite --config-template 288p
 ```
 
+## Optional: Multiple game/demo-menus to Emulationstation
+
+### By first letter (in this example "E")
+
+Make folder for games starting with E and make symbolic link for `_BootWHD`:
+```
+mkdir -p /home/pi/RetroPie/roms/e/Games_WHDLoad
+ln -s /home/pi/RetroPie/roms/amiga-data/_BootWHD /home/pi/RetroPie/roms/e/.
+```
+
+Copy gamefiles which starts with E to `\\retropie\roms\e\Games_WHDLoad` or `/home/pi/RetroPie/roms/e/Games_WHDLoad`.
+Remove AGA and CD32 games if you like and unpack archives:
+```
+cd /home/pi/RetroPie/roms/e/Games_WHDLoad
+rm *_{AGA,CD32}*\.lh{a,z}
+7z x "*.lha"
+```
+
+Generate .uae-files:
+```
+cd /home/pi/.uaeconfigmaker
+python3 uae_config_maker.py --no-update --create-autostartup --force-config-overwrite --scandirs /home/pi/RetroPie/roms/e/ --outputdir /home/pi/RetroPie/roms/e/
+```
+
+#### Add "E"-menu to amulations station
+Make copy of `es_systems.cfg` and edit copy:
+```
+sudo cp /etc/emulationstation/es_systems.cfg /opt/retropie/configs/all/emulationstation/es_systems.cfg
+sudo nano /opt/retropie/configs/all/emulationstation/es_systems.cfg
+```
+Add lines:
+```
+  <system>
+    <name>e</name>
+    <fullname>Commodore Amiga E</fullname>
+    <path>/home/pi/RetroPie/roms/e</path>
+    <extension>.uae</extension>
+    <command>/opt/retropie/supplementary/runcommand/runcommand.sh 0 _SYS_ amiga %ROM%</command>
+    <platform>amiga</platform>
+    <theme>e</theme>
+  </system>
+```
+Restart Emulation station
+
+
 ## Misc stuff
 ### disable dynamic CPU frequency scaling
 Maximum frequency all the time:
@@ -190,4 +235,3 @@ htop
 
 
 ## Todo
-- Own menu for CD32 and AGA games and demos
