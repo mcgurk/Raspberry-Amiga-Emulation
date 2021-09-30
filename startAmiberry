@@ -1,5 +1,4 @@
 #!/bin/sh
-# this file is: ~/startAmiberry
 #sudo setterm -blank force < /dev/tty1
 FOLDER=~/amiberry-rpi4-dmx-32bit
 cd $FOLDER
