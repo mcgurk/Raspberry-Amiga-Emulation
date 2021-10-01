@@ -3,5 +3,5 @@
 FOLDER=~/amiberry-rpi4-dmx-32bit
 cd $FOLDER
 clear
-./amiberry --config $FOLDER/conf/a1200-wb31.uae -G
+sudo nice --19 sudo -u pi ./amiberry --config ~/conf/a1200-wb32.uae -G
 #sudo setterm -blank poke < /dev/tty1
